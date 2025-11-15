@@ -7,8 +7,13 @@
   justify-content: space-between;
   gap: 1.5rem;
   padding: 0.75rem 2rem;
-  background-color: var(--surface-alt, #1e293b);
-  border-bottom: 1px solid var(--border, rgba(148, 163, 184, 0.35));
+  background-color: white;
+  border-bottom: 1px grey;
+}
+
+.toolbar{
+  display: flex;
+  justify-content: space-between;
 }
 
 .logo {
@@ -30,7 +35,7 @@
 
 .nav-links a {
   font-weight: 600;
-  color: var(--text, #e2e8f0);
+  color: grey;
   text-decoration: none;
 }
 

@@ -1,8 +1,12 @@
-import {Component, signal} from '@angular/core';
+import {AfterContentInit, AfterViewInit, Component, computed, effect, inject, OnInit, signal} from '@angular/core';
 import {MatButton} from '@angular/material/button';
 import {MatCard} from '@angular/material/card';
 import {NgClass} from '@angular/common';
 import {MatIcon} from '@angular/material/icon';
+import {TranslocoService} from '@jsverse/transloco';
+import {GeoService} from './services/geo-service';
+import {count} from 'rxjs';
+import {Header} from './components/header/header';
 
 @Component({
   selector: 'app-root',
@@ -10,13 +14,16 @@ import {MatIcon} from '@angular/material/icon';
     MatButton,
     MatCard,
     NgClass,
-    MatIcon
+    MatIcon,
+    Header
   ],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
-export class App {
-  protected readonly title = signal('softronic-fe');
+export class App{
+
+  protected readonly title = signal('Softronic');
+
   features = [
     {
       icon: 'bolt',
@@ -80,4 +87,15 @@ export class App {
       featured: false,
     },
   ];
+
+  geoService = inject(GeoService);
+  language = computed(() => this.geoService.country())
+
+  constructor() {
+    effect(() => {
+      console.log(this.language())
+    });
+  }
+
+  country = computed(() => this.geoService.getCountry());
 }

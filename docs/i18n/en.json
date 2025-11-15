@@ -1,0 +1,9 @@
+{
+  "header": {
+    "features": "Features",
+    "pricing": "Pricing",
+    "about": "About",
+    "register": "Register",
+    "login": "Login"
+  }
+}
