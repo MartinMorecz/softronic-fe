@@ -3,7 +3,7 @@
   <mat-toolbar color="primary" class="toolbar">
     <div class="nav-links">
       <span class="logo">
-        <img ngSrc="./../public/images/softronic_logo.png" alt="Softronic" height="303" width="857">
+        <img ngSrc="images/logo.png" alt="Softronic" height="303" width="857">
       </span>
       <span class="spacer"></span>
       <nav class="nav-links">
@@ -13,7 +13,9 @@
       </nav>
     </div>
     <div class="nav-action">
-      <button matButton [matMenuTriggerFor]="menu">{{ 'lang' }}</button>
+      <button matButton [matMenuTriggerFor]="menu" ><img alt="language_select"
+                                                         ngSrc="images/language_select.png" height="24"
+                                                         width="24"></button>
       <mat-menu #menu="matMenu">
         @for (lang of languages; track lang) {
           <button mat-menu-item [value]="lang.value">{{lang.label}}</button>

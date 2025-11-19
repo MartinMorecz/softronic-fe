@@ -5,5 +5,10 @@
     "about": "About",
     "register": "Register",
     "login": "Login"
+  },
+  "hero": {
+    "title": "Your Battery Monitoring Platform",
+    "subtitle": "Monitor your battery in real time, predictive analytics and smart alerts - all in one dashboard",
+    "waiting.list": "Get notified when app is released"
   }
 }

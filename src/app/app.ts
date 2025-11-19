@@ -1,12 +1,11 @@
-import {AfterContentInit, AfterViewInit, Component, computed, effect, inject, OnInit, signal} from '@angular/core';
+import {Component, computed, effect, inject, signal} from '@angular/core';
 import {MatButton} from '@angular/material/button';
 import {MatCard} from '@angular/material/card';
 import {NgClass} from '@angular/common';
 import {MatIcon} from '@angular/material/icon';
-import {TranslocoService} from '@jsverse/transloco';
 import {GeoService} from './services/geo-service';
-import {count} from 'rxjs';
 import {Header} from './components/header/header';
+import {Hero} from './components/main/hero/hero/hero';
 
 @Component({
   selector: 'app-root',
@@ -15,7 +14,8 @@ import {Header} from './components/header/header';
     MatCard,
     NgClass,
     MatIcon,
-    Header
+    Header,
+    Hero
   ],
   templateUrl: './app.html',
   styleUrl: './app.css'

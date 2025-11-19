@@ -7,8 +7,7 @@
   justify-content: space-between;
   gap: 1.5rem;
   padding: 0.75rem 2rem;
-  background-color: white;
-  border-bottom: 1px grey;
+  background: linear-gradient(to right, darkblue, darkcyan);
 }
 
 .toolbar{
@@ -35,13 +34,13 @@
 
 .nav-links a {
   font-weight: 600;
-  color: grey;
+  color: whitesmoke;
   text-decoration: none;
 }
 
 .nav-links a:hover,
 .nav-links a:focus {
-  color: var(--accent);
+  color: lightblue;
 }
 
 .waitlist-button {
