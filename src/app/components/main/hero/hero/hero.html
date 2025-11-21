@@ -7,9 +7,14 @@
           {{'hero.subtitle' | transloco}}
         </p>
       </div>
-      <div class="hero-buttons">
-        <button mat-stroked-button color="primary">{{ 'hero.waiting.list' | transloco }}</button>
-      </div>
+        <form class="cta-form" [formGroup]="ctaForm" >
+          <mat-form-field class="cta-field" >
+            <input  matInput type="email" maxlength="100" placeholder="Email address" [formControl]="email" required>
+            <button mat-flat-button type="submit" matSuffix class="cta-button" (click)="notifyUser()" [style]="'background-color: black;'">{{ 'hero.waiting.list' | transloco }}</button>
+
+          </mat-form-field>
+
+        </form>
     </div>
     <div class="hero-image">
       <img class="battery-icon" src="images/softronic_battery_hero_image.png" alt="battery_monitoring_img">

@@ -13,10 +13,10 @@
       </nav>
     </div>
     <div class="nav-action">
-      <button matButton [matMenuTriggerFor]="menu" ><img alt="language_select"
+      <button matButton [matMenuTriggerFor]="langMenu" ><img alt="language_select"
                                                          ngSrc="images/language_select.png" height="24"
                                                          width="24"></button>
-      <mat-menu #menu="matMenu">
+      <mat-menu #langMenu="matMenu">
         @for (lang of languages; track lang) {
           <button mat-menu-item [value]="lang.value">{{lang.label}}</button>
         }

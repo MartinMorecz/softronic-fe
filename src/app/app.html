@@ -2,37 +2,7 @@
 
 <hero [language]="language()"></hero>
 
-<!-- Features Section -->
-<section id="features" class="section features">
-  <h2 class="section-title">Powerful Features</h2>
-  <p class="section-subtitle">
-    Everything you need to understand and optimize battery performance
-  </p>
-
-  <div class="features-grid">
-    @for (feature of features; track feature) {
-      <mat-card class="feature-card">
-        <mat-icon class="feature-icon">{{ feature.icon }}</mat-icon>
-        <h3>{{ feature.title }}</h3>
-        <p>{{ feature.description }}</p>
-      </mat-card>
-    }
-  </div>
-</section>
-
-<!-- Stats Section -->
-<section class="section stats">
-  <div class="stats-grid">
-    @for (stat of stats; track stat){
-      <div class="stat">
-        <h3>{{ stat.number }}</h3>
-        <p>{{ stat.label }}</p>
-      </div>
-    }
-
-  </div>
-</section>
-
+<features [language]="language()"></features>
 <!-- Pricing Section -->
 <section id="pricing" class="section pricing">
   <h2 class="section-title">Simple, Transparent Pricing</h2>

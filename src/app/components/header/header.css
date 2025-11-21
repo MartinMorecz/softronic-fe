@@ -4,7 +4,7 @@
   z-index: 1000;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   gap: 1.5rem;
   padding: 0.75rem 2rem;
   background: linear-gradient(to right, darkblue, darkcyan);
@@ -12,6 +12,7 @@
 
 .toolbar{
   display: flex;
+  max-width: 1400px;
   justify-content: space-between;
 }
 
