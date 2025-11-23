@@ -1,9 +1,9 @@
 import {Component, inject, input} from '@angular/core';
 import {MatButton} from '@angular/material/button';
 import {TranslocoPipe} from '@jsverse/transloco';
-import {MatFormField, MatHint, MatInput, MatSuffix} from '@angular/material/input';
+import {MatFormField, MatInput, MatSuffix} from '@angular/material/input';
 import {FormBuilder, FormControl, ReactiveFormsModule, Validators} from '@angular/forms';
-import {MatSnackBar, MatSnackBarConfig} from '@angular/material/snack-bar';
+import {MatSnackBar} from '@angular/material/snack-bar';
 
 @Component({
   selector: 'hero',
@@ -12,7 +12,6 @@ import {MatSnackBar, MatSnackBarConfig} from '@angular/material/snack-bar';
     TranslocoPipe,
     MatInput,
     MatFormField,
-    MatHint,
     ReactiveFormsModule,
     MatSuffix
   ],
