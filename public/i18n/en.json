@@ -10,5 +10,39 @@
     "title": "Your Battery Monitoring Platform",
     "subtitle": "Monitor your battery in real time, predictive analytics and smart alerts - all in one dashboard",
     "waiting.list": "Get notified when app is released"
+  },
+  "pricing": {
+    "title": {
+      "free": "Free",
+      "plus": "Plus+",
+      "pro": "Pro✚"
+    },
+    "monthly": "€ Monthly",
+    "yearly": "€ Yearly",
+    "features": {
+      "free": {
+        "devices": "Up to 5 devices",
+        "monitoring": "Basic monitoring",
+        "support": "Email support"
+      },
+      "plus": {
+        "devices": "Up to 25 devices",
+        "monitoring": "Advanced analytics",
+        "support": "Priority support",
+        "alert": "Smart alert"
+      },
+      "pro": {
+        "devices": "Up to 50 devices",
+        "monitoring": "Predictive analytics",
+        "support": "Dedicated support",
+        "alert": "Custom alerts and trackings"
+      },
+      "everything": {
+        "free": "Everything in Free and",
+        "plus": "Everything in Plus and"
+      }
+    },
+    "cta": "Start"
+
   }
 }

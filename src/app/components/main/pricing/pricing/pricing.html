@@ -1,1 +1,45 @@
-<p>pricing works!</p>
+<!-- Pricing Section -->
+<section id="pricing" class="section pricing">
+  <div>
+  </div>
+  <div class="pricing-title">
+    <h2 class="section-title">Pricing and Plans </h2>
+
+    <span class="plan-toggle"><mat-slide-toggle (change)="pricingAnually = !pricingAnually">Monthly</mat-slide-toggle></span>
+  </div>
+  <div class="pricing-content">
+      @for (plan of pricing; track plan) {
+        <mat-card
+          [ngClass]="{ featured: plan.featured }"
+          class="pricing-card"
+        >
+          @if (plan.featured) {
+            <span class="badge">Most Popular</span>
+          }
+          <h3>{{ plan.title | transloco}}</h3>
+          <p class="price">
+          @if(pricingAnually){
+            <span>{{ plan.priceYearly }}{{ 'pricing.yearly' | transloco}}</span>
+          } @else {
+            <span>{{ plan.priceMonthly }}{{ 'pricing.monthly' | transloco}}</span>
+          }
+          </p>
+
+          <ul>
+            @for (feature of plan.features; track feature){
+              <li class="features">{{feature | transloco}}</li>
+            }
+          </ul>
+          @if(!plan.free){
+            <button
+              matButton="tonal"
+              [color]="plan.featured ? 'accent' : 'primary'"
+              class="pricing-btn"
+            >
+              {{ plan.cta | transloco}}
+            </button>
+          }
+        </mat-card>
+      }
+    </div>
+</section>

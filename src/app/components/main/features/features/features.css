@@ -20,6 +20,7 @@
   padding: 4rem 2rem;
   text-align: center;
 }
+
 .section-title-container{
   border-width: 1.5px;
   border-top-style: solid;
@@ -53,8 +54,15 @@
   text-align: center;
 }
 
+.feature-card-header{
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
 .feature-icon {
-  font-size: 40px;
+  height: 35px;
+  width: 35px;
   color: #1976d2;
   margin-bottom: 1rem;
 }

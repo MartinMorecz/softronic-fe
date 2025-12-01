@@ -11,23 +11,15 @@
     <div class="features-grid">
       @for (feature of features; track feature) {
         <mat-card class="feature-card">
-          <mat-icon class="feature-icon">{{ feature.icon }}</mat-icon>
-          <h3>{{ feature.title }}</h3>
-          <p>{{ feature.description }}</p>
+          <div class="feature-card-header">
+            <mat-icon class="feature-icon">{{ feature.icon }}</mat-icon>
+            <h3>{{ feature.title }}</h3>
+          </div>
+          <div class="feature-card-content">
+            <p>{{ feature.description }}</p>
+          </div>
         </mat-card>
       }
     </div>
-  </div>
-</section>
-
-<!-- Stats Section -->
-<section class="section stats">
-  <div class="stats-grid">
-    @for (stat of stats; track stat){
-      <div class="stat">
-        <h3>{{ stat.number }}</h3>
-        <p>{{ stat.label }}</p>
-      </div>
-    }
   </div>
 </section>

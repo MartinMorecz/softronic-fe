@@ -3,35 +3,8 @@
 <hero [language]="language()"></hero>
 
 <features [language]="language()"></features>
-<!-- Pricing Section -->
-<section id="pricing" class="section pricing">
-  <h2 class="section-title">Simple, Transparent Pricing</h2>
-  <p class="section-subtitle">Choose the plan that fits your needs</p>
 
-  <div class="pricing-grid">
-    @for (plan of pricing; track plan) {
-      <mat-card
-        [ngClass]="{ featured: plan.featured }"
-        class="pricing-card"
-      >
-        @if (plan.featured) {
-          <span class="badge">Most Popular</span>
-        }
-        <h3>{{ plan.title }}</h3>
-        <p class="price">{{ plan.price }}</p>
-        <ul>
-        </ul>
-        <button
-          mat-raised-button
-          [color]="plan.featured ? 'accent' : 'primary'"
-          class="pricing-btn"
-        >
-          {{ plan.cta }}
-        </button>
-      </mat-card>
-    }
-  </div>
-</section>
+<pricing [language]="language()"></pricing>
 
 <!-- CTA Section -->
 <section class="section cta">
